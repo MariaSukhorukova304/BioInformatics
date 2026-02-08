@@ -1,0 +1,47 @@
+    5  git clone https://github.com/Weakne55/Bioinformatics305.git
+   11  git remote -v
+   14  git clone https://github.com/Weakne55/Bioinformatics305.git
+   16  git remote remove origin
+   17  git remote add origin git@github.com:MariaSukhorukova304/Bioinformatics305.git
+   18  git remote -v
+   24  git add lab_disaster/raw_data/
+   25  git commit -m "Cleanup temp files"
+   26  git config --global user.email "mary1902su777@yandex.ru"
+   27  git config --global user.name "Maria Sukhorukova"
+   28  git config user.email "mary1902su777@yandex.ru"
+   29  git config user.name "Maria Sukhorukova"
+   30  git commit -m "Cleanup temp files"
+   31  git log --oneline -1
+   39  git checkout -b investigation
+   40  git add infected_reads.txt
+   41  git commit -m "Add infected reads with TGCA pattern"
+   42  git log --oneline -1
+   46  git add mini_run.fastq
+   47  git commit -m "Add mini_run.fastq with first and last 50 lines"
+   50  git status
+   51  git checkout -- lab_disaster/experiment.log
+   53  echo "git checkout -- lab_disaster/experiment.log" > command.txt
+   54  git branch -a | grep -E "main|master"
+   55  git checkout main 2>/dev/null || git checkout master
+   56  git add command.txt
+   57  git commit -m "Add command to restore deleted files"
+   64  git checkout main 2>/dev/null || git checkout master
+   65  git add access.log sorted_users.txt sort.txt
+   66  git commit -m "Add access logs and user statistics"
+   67  git merge investigation -m "Merge investigation branch"
+   68  git log --oneline -5 --graph
+   75  git add genes.tsv genes_fixed.csv
+   76  git commit -m "Add genes files with space to comma conversion"
+   77  git checkout -b cleaning
+   80  git add diskusage.file
+   81  git commit -m "Add disk usage report for lab_disaster files"
+   83  git add test_file.txt
+   84  git commit -m "Add test file for hash experiment"
+   85  HASH4=$(git log --oneline -1 | cut -d' ' -f1 | head -c4)
+   88  git add forgotten.txt
+   89  git commit --amend --no-edit
+   91  git log --oneline -2
+Когда мы делаем git commit --amend, мы создаём новый коммит с теми же родителями и сообщением, но:
+   93  git add amend.txt
+   94  git commit -m "Add amend experiment analysis"
+   95  history | grep "git " > report_commands.txt
