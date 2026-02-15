@@ -1,0 +1,4 @@
+ 21:45:29 up  2:58,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+sukhoruk pts/1    -                20:13    1:32m  0.05s  0.02s -bash
+uid=1000(sukhorukovamp) gid=1000(sukhorukovamp) groups=1000(sukhorukovamp),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
